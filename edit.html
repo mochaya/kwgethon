@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品管理システム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>商品管理システム</h1>
+        <form id="productForm">
+            <label for="storeName">店舗名: </label>
+            <input type="text" id="storeName" name="storeName"><br>
+
+            <button type="button" onclick="deleteStore()">削除</button>
+            <button type="button" onclick="editStore()">編集</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品名</th>
+                        <th>値段</th>
+                        <th>商品説明</th>
+                        <th>画像</th>
+                    </tr>
+                </thead>
+                <tbody id="productList">
+                    <!-- 商品リストがここに表示されます -->
+                </tbody>
+            </table>
+
+            <input type="button" value="登録" onclick="registerProduct()">
+        </form>
+
+        <div id="message">
+            <!-- 登録や削除完了のメッセージがここに表示されます -->
+        </div>
+    </div>
+
+    <script>
+        function registerProduct() {
+            document.getElementById("message").innerHTML = "登録完了画面";
+            document.getElementById("message").style.display = "block";
+        }
+
+        function deleteStore() {
+            document.getElementById("message").innerHTML = "削除完了画面";
+            document.getElementById("message").style.display = "block";
+        }
+
+        function editStore() {
+            document.getElementById("message").innerHTML = "変更画面";
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
